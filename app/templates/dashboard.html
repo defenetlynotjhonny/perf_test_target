@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Dashboard</h1>
+  <p>Welcome, <b>{{ user.full_name }}</b> ({{ user.username }}).</p>
+
+  <div class="card">
+    <h3>Protected content</h3>
+    <p>This page requires authentication (JWT stored in an HttpOnly cookie).</p>
+    <p>API check: <code>GET /api/me</code></p>
+  </div>
+{% endblock %}
